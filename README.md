@@ -21,3 +21,5 @@ value from the eligible numbers to return.
 | 2025-04-20 | create RandomNumberUtilities class |
 
 ## References
+
+* [Numpy 2.2](https://numpy.org/doc/2.2/)

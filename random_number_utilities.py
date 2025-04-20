@@ -1,14 +1,13 @@
 from typing import Any
 
 import numpy as np
-from numpy import signedinteger, bool, ndarray, dtype, unsignedinteger
-from numpy._typing import _64Bit, _8Bit, _16Bit, _32Bit
+
 class RandomNumberUtilities:
+    rng = np.random.default_rng()
 
     @staticmethod
     def random_int(min_value: int, max_value: int, size: int = 1):
-        rng = np.random.default_rng()  # Create an instance of Generator
-        return rng.integers(min_value, max_value + 1, dtype = np.int32, size = size)
+        return RandomNumberUtilities.rng.integers(min_value, max_value + 1, dtype = np.int32, size = size)
 
 
     @staticmethod

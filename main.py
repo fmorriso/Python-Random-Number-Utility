@@ -42,7 +42,7 @@ def verify_random_float_with_tolerance_works(num_tests: int = 1_000, test_size: 
     # keep track of how many times the min_value and max_value were generated
     frequency = {'min': 0, 'max': 0}
     for test in range(num_tests):
-        nums = RandomNumberUtilities.random_float_with_tolerance(min_value, max_value, tolerance, test_size)
+        nums = RandomNumberUtilities.random_float_with_tolerance(min_value, max_value, test_size, tolerance)
         # print(f'{test} nums: {nums}')
         max_found = max(max_found, nums.max())
         min_found = min(min_found, nums.min())

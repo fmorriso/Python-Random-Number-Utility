@@ -12,14 +12,13 @@ class RandomNumberUtilities:
 
     @staticmethod
     def random_float(min_value: float, max_value: float, size: int = 1):
-        tolerance: float = (max_value - min_value) / 10_000
         # print(f'tolerance: {tolerance}')
-        return RandomNumberUtilities.random_float_with_tolerance(min_value, max_value, tolerance, size)
+        return RandomNumberUtilities.random_float_with_tolerance(min_value, max_value, size)
 
 
     @staticmethod
-    def random_float_with_tolerance(min_value: float, max_value: float, tolerance: float = 0.01, size: int = 1):
-        if tolerance < 0.0 or tolerance is None:
+    def random_float_with_tolerance(min_value: float, max_value: float, size: int = 1, tolerance: float = None):
+        if tolerance is None:
             tolerance = (max_value - min_value) / 10_000
         # print(f'tolerance: {tolerance}')
         extended_min_value = min_value - tolerance

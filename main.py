@@ -1,5 +1,7 @@
 import sys
 
+import numpy as np
+
 from random_number_utilities import RandomNumberUtilities
 
 
@@ -88,6 +90,14 @@ def verify_random_float_works(num_tests: int = 1_000, test_size: int = 20):
     print(f'{num_tests = }, {test_size = }, {frequency = }')
 
 
+def get_python_version() -> str:
+    return f'{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}'
+
+
+def get_numpy_version() -> str:
+    return f'{np.__version__}'
+
+
 def main():
     verify_random_int_works()
     verify_random_float_works()
@@ -96,4 +106,6 @@ def main():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    print(f'Python version: {get_python_version()}')
+    print(f'NumPy version: {get_numpy_version()}')
     main()

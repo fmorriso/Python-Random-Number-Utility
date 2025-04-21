@@ -9,7 +9,7 @@ def verify_random_int_works(num_tests: int = 100, test_size: int = 20):
     min_value: int = 1
     max_value: int = 6
 
-    max_found: int = 0
+    max_found: int = -sys.maxsize
     min_found: int = sys.maxsize
 
     # keep track of how many times the min_value and max_value were generated
@@ -39,8 +39,9 @@ def verify_random_float_with_tolerance_works(num_tests: int = 1_000, test_size: 
     max_value: float = 6.0
     tolerance: float = 0.3
 
-    max_found: float = 0
+    max_found: float = sys.float_info.min
     min_found: float = sys.float_info.max
+
     # keep track of how many times the min_value and max_value were generated
     frequency = {'min': 0, 'max': 0}
     for test in range(num_tests):
@@ -65,8 +66,8 @@ def verify_random_float_works(num_tests: int = 1_000, test_size: int = 20):
     min_value: float = 1.0
     max_value: float = 6.0
 
-    max_found = 0
-    min_found = sys.float_info.max
+    max_found: float = sys.float_info.min
+    min_found: float = sys.float_info.max
 
     # keep track of how many times the min_value and max_value were generated
     frequency = {'min': 0, 'max': 0}

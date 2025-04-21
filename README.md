@@ -15,10 +15,11 @@ value from the eligible numbers to return.
 
 ## Change History
 
-| Date       | Description                        |
-|:-----------|:-----------------------------------|
-| 2025-04-19 | Initial creation                   |
-| 2025-04-20 | create RandomNumberUtilities class |
+| Date       | Description                           |
+|:-----------|:--------------------------------------|
+| 2025-04-19 | Initial creation                      |
+| 2025-04-20 | create RandomNumberUtilities class    |
+| 2025-04-21 | use ClassVar in RandomNumberUtilities |
 
 ## References
 

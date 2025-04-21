@@ -1,8 +1,15 @@
+from typing import ClassVar
+
 import numpy as np
 
 
 class RandomNumberUtilities:
-    rng = np.random.default_rng()
+    """
+    A random number utility that INCLUDES both the minimum and maximum values,
+    unlike default python which fails to include the maximum value when generating
+    random numbers.
+    """
+    rng: ClassVar[np.random.Generator] = np.random.default_rng()
 
 
     @staticmethod
